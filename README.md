@@ -44,7 +44,7 @@ Before running the application, ensure you have the following software installed
    code .  # For Visual Studio Code
    ```
 
-   Or use Visual Studio.
+   Or in Visual Studio, open the basic-api project and build/run.
 
 4. Set up your database connection:   
 Open `appsettings.json` and replace your connection string in DefaultConnection.
