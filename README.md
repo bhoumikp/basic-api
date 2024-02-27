@@ -41,7 +41,7 @@ Before running the application, ensure you have the following software installed
 2. Navigate to the project directory:
 
    ```bash
-   cd basic-api
+   cd basic-api/src
    ```
 
 <br />
