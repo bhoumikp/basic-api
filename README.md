@@ -24,19 +24,22 @@ Before running the application, ensure you have the following software installed
 - [SQL Server](https://www.microsoft.com/en-in/sql-server/sql-server-downloads)
 - [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/)
 
-## Getting Started
+## 🔧 Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/bhoumikp/basic-api.git
+   git clone https://github.com/your-username/your-repo.git
    ```
+   <br />
 
 2. Navigate to the project directory:
 
    ```bash
    cd basic-api
    ```
+
+<br />
 
 3. Open the project in your preferred code editor:
 
@@ -46,11 +49,17 @@ Before running the application, ensure you have the following software installed
 
    Or in Visual Studio, open the basic-api project and build/run.
 
+<br />
+
 4. Set up your database connection:   
 Open `appsettings.json` and replace your connection string in DefaultConnection.
    ```json
     "Data Source={{YOUR_DESKTOP_NAME}}\\SQLEXPRESS;Initial Catalog={{YOUR_DB_NAME}};Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
    ```
+   - [Find Your Desktop Name](https://it.umn.edu/services-technologies/how-tos/find-your-computer-name)
+   - It isn't necessary to add a database to the SQL server, add the database name in the connection string.
+
+<br />
 
 5. Navigate to the project directory in the command line. Run the following commands to update the database:
 
@@ -59,17 +68,22 @@ Open `appsettings.json` and replace your connection string in DefaultConnection.
    dotnet ef database update
    ```
 
+<br />
+
 6. Run the application:
    ```bash
    dotnet run
    ```
 
+<br />
+
 7. Access the API:
 
    Open your web browser and go to [https://localhost:5015/api/entities](https://localhost:5015/api/entities) to access the API.
 
+<br>
 
-## Running Tests
+## 📝 Running Tests
 
 To run tests, use the following command:
 
@@ -77,7 +91,9 @@ To run tests, use the following command:
 dotnet test
 ```
 
-## Dependencies
+<br>
+
+## 📚 Dependencies
 - **[net8.0]**: 
   - coverlet.collector                           
   - Microsoft.AspNetCore.Mvc.NewtonsoftJson      
@@ -93,7 +109,9 @@ dotnet test
   - xunit                                        
   - xunit.runner.visualstudio
 
-## Features
+<br>
+
+## 🔎 Features
 
 ### Database Seeding
 - On running the project for the first time, if your database already has no entities, it will populate 100 entities with random data.
@@ -136,9 +154,13 @@ dotnet test
     }
     ```
 
+<br />
+
 - **Get Entity by ID:**
   - Route: `GET /api/entities/{id}`
   - Description: It simply retrieves an entity based on the provided Id.
+
+<br />
 
 - **Get All Entities with Search, Pagination, and Filtering:**
   - Route: `GET /api/entities`
@@ -146,7 +168,9 @@ dotnet test
     - `search`: Searches through all the entities and returns related entities based on the query term. Ex. `"?search=jon doe"`.
     - `page`, `pageSize`: Clients can specify which page they want to retrieve and how many entities should retrieve in one page.
     - `gender`, `startDate`, `endDate`, `countries`: More filtered entities will retrieve using these parameters.
-  - Description: This route returns all the entities and accepts some searching and filtering parameters to get results close to the user's expectations
+  - Description: This route returns all the entities and accepts some searching and filtering parameters to get results close to the user's expectations.
+
+<br />
 
 - **Update Entity by ID:**
   - Route: `PUT /api/entities/{id}`
@@ -158,6 +182,8 @@ dotnet test
           "gender": "Female"
         }
       ```
+
+<br />
 
 - **Delete Entity by ID:**
   - Route: `DELETE /api/entities/{id}`
@@ -180,7 +206,14 @@ dotnet test
   - API logs every failed attempt into a log file, including details like the number of attempts, delay, and the success or failure of the operation.
 
 ### Test case
-- This project contains a test case, that verifies the retry mechanism, which tries to insert an entity with Id already present in the database and expects to create that entity with another Id without canceling the operation
+- This project contains a test case, that verifies the retry mechanism, which tries to insert an entity with Id already present in the database and expects to create that entity with another Id without canceling the operation.
 
-## Contact
-- If there is any query or question related to the basic-api project or have errors installing or getting started, Please contact me at bhoumikpagdhare2002@gmail.com
+## 📞 Contact
+- If there is any query or question related to the basic-api project or have errors installing or getting started, contact me at bhoumikpagdhare2002@gmail.com.
+
+<br />
+
+
+[![github](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bhoumikp)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bhoumikp/)
+[![instagram](https://img.shields.io/badge/instagram-B344A8?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_.bhoumik._/)
