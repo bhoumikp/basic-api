@@ -1,7 +1,7 @@
 
 # Basic API using ASP .NET
 
-## Table of Contents
+## 🔖 Table of Contents
 
 1. [Overview](#overview)
 2. [Prerequisites](#prerequisites)
@@ -11,18 +11,23 @@
 6. [Features](#features)
 7. [Contact](#contact)
 
+<br>
 
-## Overview
+## 👁️‍🗨️ Overview
 
 The basic API project is an ASP.NET Core 8 API that provides endpoints for managing entities with related addresses, dates, and names. It allows users to create, retrieve, update, and delete entities and perform advanced filtering and sorting operations. It contains a retry mechanism to adapt to various situations where the API can fail.
 
-## Prerequisites
+<br>
+
+## 🔑 Prerequisites
 
 Before running the application, ensure you have the following software installed on your machine:
 
 - [.NET SDK](https://dotnet.microsoft.com/download) (version 8 or later)
 - [SQL Server](https://www.microsoft.com/en-in/sql-server/sql-server-downloads)
 - [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/)
+
+<br>
 
 ## 🔧 Installation
 
@@ -116,6 +121,8 @@ dotnet test
 ### Database Seeding
 - On running the project for the first time, if your database already has no entities, it will populate 100 entities with random data.
 
+<br>
+
 ### Entity CRUD Operations
 
 - **Create Entity:**
@@ -208,8 +215,10 @@ dotnet test
 ### Test case
 - This project contains a test case, that verifies the retry mechanism, which tries to insert an entity with Id already present in the database and expects to create that entity with another Id without canceling the operation.
 
+<br>
+
 ## 📞 Contact
-- If there is any query or question related to the basic-api project or have errors installing or getting started, contact me at bhoumikpagdhare2002@gmail.com.
+- If there is any query or question related to the basic-api project or have errors installing or getting started, you can contact me at bhoumikpagdhare2002@gmail.com.
 
 <br />
 
