@@ -14,7 +14,7 @@
 
 ## Overview
 
-The basic API project is an ASP.NET Core 8 API that provides endpoints for managing entities with related addresses, dates, and names. It allows users to create, retrieve, update, and delete entities, as well as perform advanced filtering and sorting operations. It contains retry mechanism to adapts to various situations where the API can fail.
+The basic API project is an ASP.NET Core 8 API that provides endpoints for managing entities with related addresses, dates, and names. It allows users to create, retrieve, update, and delete entities and perform advanced filtering and sorting operations. It contains a retry mechanism to adapt to various situations where the API can fail.
 
 ## Prerequisites
 
@@ -29,13 +29,13 @@ Before running the application, ensure you have the following software installed
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/bhoumikp/basic-api.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd your-repo
+   cd basic-api
    ```
 
 3. Open the project in your preferred code editor:
@@ -96,7 +96,7 @@ dotnet test
 ## Features
 
 ### Database Seeding
-- On running the project first time, if your database doesn't have any entities already, it will populate 100 entities with random data.
+- On running the project for the first time, if your database already has no entities, it will populate 100 entities with random data.
 
 ### Entity CRUD Operations
 
@@ -138,7 +138,7 @@ dotnet test
 
 - **Get Entity by ID:**
   - Route: `GET /api/entities/{id}`
-  - Description: It simply retrieve an entity based on the provided Id.
+  - Description: It simply retrieves an entity based on the provided Id.
 
 - **Get All Entities with Search, Pagination, and Filtering:**
   - Route: `GET /api/entities`
@@ -146,7 +146,7 @@ dotnet test
     - `search`: Searches through all the entities and returns related entities based on the query term. Ex. `"?search=jon doe"`.
     - `page`, `pageSize`: Clients can specify which page they want to retrieve and how many entities should retrieve in one page.
     - `gender`, `startDate`, `endDate`, `countries`: More filtered entities will retrieve using these parameters.
-  - Description: This route returns all the entities and accepts some searching and filtering parameters to get results close to user's expectations
+  - Description: This route returns all the entities and accepts some searching and filtering parameters to get results close to the user's expectations
 
 - **Update Entity by ID:**
   - Route: `PUT /api/entities/{id}`
@@ -161,14 +161,14 @@ dotnet test
 
 - **Delete Entity by ID:**
   - Route: `DELETE /api/entities/{id}`
-  - Description: It simply matches the entity with given Id and remove it from the database.
+  - Description: It simply matches the entity with the given Id and removes it from the database.
 
 ### Retry and Backoff Mechanism
 
 - **Retry Mechanism:**
-  - It is the ability of the API to auto-retry a failed operation.
-  - In this API, the methods that contains write-to-database operations, have ability to retry the operation several times.
-  - The default rate of maximum retries is 3 and they have delays between them.
+  - The API can auto-retry a failed operation.
+  - In this API, the methods which contain write-to-database operations, can retry the operation several times.
+  - The default rate of maximum retries is 3 and each retry has a delay between them.
 
 - **Backoff Strategy:**
   - This API uses the exponential Backoff Strategy, in which the delay between attempts will increase exponentially after each attempt.
@@ -177,10 +177,10 @@ dotnet test
 ### Logging
 
 - **Logging Retry Details:**
-  - API logs every failed attempts into a log file, including details like, number of attempts, delay and the success or failure of the operation.
+  - API logs every failed attempt into a log file, including details like the number of attempts, delay, and the success or failure of the operation.
 
 ### Test case
-- This project contains a test case, that verifies the retry mechanism, which try to insert an entity with Id already present in the database and expects to create that entity with other Id without cancelling the operation
+- This project contains a test case, that verifies the retry mechanism, which tries to insert an entity with Id already present in the database and expects to create that entity with another Id without canceling the operation
 
 ## Contact
-- If there is any query or question related to basic-api project or have errors installing or getting started, Please contact me on bhoumikpagdhare2002@gmail.com
+- If there is any query or question related to the basic-api project or have errors installing or getting started, Please contact me at bhoumikpagdhare2002@gmail.com
